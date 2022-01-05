@@ -1,0 +1,67 @@
+.motion {
+	height: 500px;
+	width: 400px;
+	background: yellow;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 5px 5px 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 20px;
+}
+.motion h1 {
+	text-align: center;
+	line-height: 1.5;
+	font-size: 36px;
+	font-family: "Yuji Hentaigana Akari", cursive;
+}
+.motion button {
+	padding: 20px 70px;
+	border: 2px solid white;
+	border-radius: 10px;
+	font-family: "Rubik", sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	background: none;
+	color: white;
+	margin-top: 30px;
+	background-color: green;
+}
+.motion button:hover {
+	box-shadow: 0 0 5px 5px red;
+}
+.git {
+	font-size: 30px;
+	cursor: pointer;
+}
+.star {
+	color: red;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	.motion {
+		height: 70%;
+		width: 90%;
+	}
+	.motion button {
+		padding: 15px 50px;
+	}
+}
+@media only screen and (min-device-width: 0px) and (max-device-width: 319px) {
+	.motion {
+		height: 400px;
+		width: 90%;
+	}
+	.motion h1 {
+		text-align: center;
+		line-height: 1.2;
+		font-size: 22px;
+	}
+	.motion button {
+		padding: 15px 50px;
+	}
+}

@@ -1,0 +1,205 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+.index-container {
+	background-color: #6c0071;
+	min-height: 100vh;
+
+	width: 100vw;
+}
+.navbar-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 0.5px solid white;
+	box-shadow: 5px 5px 20px;
+}
+.navbar-container h1 {
+	font-family: "Yuji Hentaigana Akari", cursive;
+	font-weight: bolder;
+	padding: 0 5%;
+	font-size: 50px;
+}
+.navbar-container h2 {
+	font-size: 40px;
+	padding-right: 5%;
+	font-family: "Yuji Hentaigana Akari", cursive;
+}
+.board-container {
+	height: 35%;
+	width: 29%;
+
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 2%;
+	display: flex;
+	justify-content: center;
+
+	flex-wrap: wrap;
+}
+.square {
+	height: 28%;
+	width: 23%;
+	border: 10px solid orange;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-container {
+	width: 100%;
+	position: absolute;
+	background-color: #7f0072;
+
+	margin-top: 130px;
+	box-shadow: 5px 5px 20px;
+
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.footer-container div:nth-child(1) ul {
+	list-style: none;
+}
+.X {
+	color: red;
+	font-size: 46px;
+}
+.O {
+	color: green;
+	font-size: 46px;
+}
+.game-button {
+	height: 150px;
+	width: 100%;
+	border: 10px solid orange;
+	margin: 0 10px;
+	font-size: 44px;
+	font-weight: 700;
+}
+.square-container {
+	width: 30%;
+	height: 30%;
+	margin: 0 5px;
+}
+.square-container h1 {
+	text-align: center;
+	vertical-align: center;
+	transition: 0.5s ease;
+}
+.reset-button {
+	padding: 20px 70px;
+	border: 2px solid white;
+	border-radius: 10px;
+	font-family: "Rubik", sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	background: none;
+	color: white;
+}
+.left-part ul {
+	display: flex;
+	flex-direction: column;
+}
+.right-part {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.right-part h1 {
+	color: black;
+	font-family: "Rubik", sans-serif;
+}
+.stat-button {
+	padding: 10px 30px;
+	border: 2px solid white;
+	border-radius: 10px;
+	font-family: "Rubik", sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	background: none;
+	color: white;
+}
+.stat-button:hover {
+	box-shadow: 0 0 5px 5px olive;
+	scale: 1.1;
+}
+.reset-button:hover {
+	box-shadow: 0 0 5px 5px red;
+}
+.red {
+	color: red;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.board-container {
+		margin-top: 10%;
+		width: 60%;
+	}
+	.footer-container {
+		margin-top: 30px;
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	.board-container {
+		margin-top: 10%;
+		width: 100%;
+	}
+	.footer-container {
+		margin-top: 30px;
+	}
+	.square-container {
+		height: 30%;
+		width: 28%;
+	}
+
+	.navbar-container h2 {
+		font-size: 30px;
+		padding-right: 5%;
+		font-family: "Yuji Hentaigana Akari", cursive;
+	}
+	.navbar-container h1 {
+		font-size: 35px;
+	}
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+	.board-container {
+		margin-top: 10%;
+		width: 80%;
+	}
+	.navbar-container h1 {
+		font-size: 35px;
+	}
+}
+@media only screen and (min-device-width: 0px) and (max-device-width: 319px) {
+	.board-container {
+		margin-top: 10%;
+		width: 100%;
+	}
+	.square-container {
+		width: 25%;
+
+		margin: 0 5px;
+	}
+	.square-container {
+		height: 30%;
+	}
+
+	.motion {
+		height: 100%;
+		width: 100%;
+	}
+	.navbar-container h1 {
+		font-size: 35px;
+	}
+	.navbar-container h2 {
+		font-size: 20px;
+	}
+}
