@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export const Footer = ({
-	renderMove,
 	jumpTo,
 	history,
 	winner,
@@ -11,7 +10,6 @@ export const Footer = ({
 	setStepNumber,
 }) => {
 	const reset = () => {
-		console.log("hello");
 		setStepNumber(0);
 		setHistory[Array(9).fill(null)];
 	};

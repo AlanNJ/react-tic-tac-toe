@@ -6,6 +6,10 @@ export const Square = ({ value, onClick }) => {
 	const varient = {
 		visible: { scale: 1.2 },
 		hidden: { scale: 0 },
+		transition: {
+			duration: 1.3,
+			delay: 0.5,
+		},
 	};
 	return (
 		<div className="square-container" onClick={onClick}>

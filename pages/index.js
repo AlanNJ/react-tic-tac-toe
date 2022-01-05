@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import { calculateWinner } from "./winner";
 import { AnimatePresence, motion } from "framer-motion";
 import Modal from "../components/Modal";
-//import audio from "../public/food_G1U6tlb.mp3";
 
 export const index = () => {
 	const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -15,32 +14,19 @@ export const index = () => {
 	const [xIsNext, setXisNext] = useState(true);
 	const winner = calculateWinner(history[stepNumber]);
 	const xO = xIsNext ? "X" : "O";
-	const [audio] = useState(
+	const [audio, setAudio] = useState(
 		typeof Audio !== "undefined" && new Audio("/food_G1U6tlb.mp3")
 	);
 	useEffect(() => {
 		handleClick();
 	}, [modal]);
 
-	// const handleClick = (i) => {
-	// 	const historyPoint = history.slice(0, stepNumber + 1);
-	//
-	// 	const current = historyPoint[stepNumber];
-	//
-	// 	const squares = [...current];
-	// 	squares[i] = x0;
-	// 	setHistory([...historyPoint, squares]);
-	// 	setStepNumber(historyPoint.length);
-	// 	setXisNext(!xIsNext);
-	// 	console.log(history);
-	// };
 	console.log(history);
 	const handleClick = async (i) => {
 		const historyPoint = history.slice(0, stepNumber + 1);
 
 		const current = historyPoint[stepNumber];
 		const squares = [...current];
-		// return if won or occupied
 		if (winner || squares[i]) {
 			return;
 		}
