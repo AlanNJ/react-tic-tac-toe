@@ -3,13 +3,10 @@ import Square from "./Square";
 import { motion } from "framer-motion";
 
 export const Board = ({ squares, onClick }) => {
-	/// squares.map((value) => {
-	/// 	console.log(value);
-	/// });
 	const variants = {
 		visible: { opacity: 1 },
 		hidden: { opacity: 0 },
-		transition: { delay: 0.1 },
+		transition: { delay: 0.1, duration: 2 },
 	};
 
 	return (
