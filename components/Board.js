@@ -9,6 +9,7 @@ export const Board = ({ squares, onClick }) => {
 	const variants = {
 		visible: { opacity: 1 },
 		hidden: { opacity: 0 },
+		transition: { delay: 0.1 },
 	};
 
 	return (
